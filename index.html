@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator-container">
+        <div class="calculator">
+            <!-- Display Screen -->
+            <div class="display">
+                <div class="display-screen" id="display">0</div>
+            </div>
+            
+            <!-- Button Grid -->
+            <div class="buttons">
+                <!-- First Row: Clear and Operations -->
+                <button class="btn btn-clear" id="clear">C</button>
+                <button class="btn btn-operation" id="divide">÷</button>
+                <button class="btn btn-operation" id="multiply">×</button>
+                <button class="btn btn-operation" id="subtract">−</button>
+                
+                <!-- Second Row: Numbers 7-9 and Add -->
+                <button class="btn btn-number" id="seven">7</button>
+                <button class="btn btn-number" id="eight">8</button>
+                <button class="btn btn-number" id="nine">9</button>
+                <button class="btn btn-operation btn-add" id="add" rowspan="2">+</button>
+                
+                <!-- Third Row: Numbers 4-6 -->
+                <button class="btn btn-number" id="four">4</button>
+                <button class="btn btn-number" id="five">5</button>
+                <button class="btn btn-number" id="six">6</button>
+                
+                <!-- Fourth Row: Numbers 1-3 and Equals -->
+                <button class="btn btn-number" id="one">1</button>
+                <button class="btn btn-number" id="two">2</button>
+                <button class="btn btn-number" id="three">3</button>
+                <button class="btn btn-equals btn-tall" id="equals" rowspan="2">=</button>
+                
+                <!-- Fifth Row: Zero and Decimal -->
+                <button class="btn btn-number btn-zero" id="zero">0</button>
+                <button class="btn btn-decimal" id="decimal">.</button>
+            </div>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
