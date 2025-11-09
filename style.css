@@ -1,0 +1,286 @@
+/* Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
+/* Calculator Container */
+.calculator-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+}
+
+.calculator {
+    background: #2c3e50;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+    width: 100%;
+    max-width: 350px;
+}
+
+/* Display Screen */
+.display {
+    background: #1a252f;
+    border-radius: 15px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: inset 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+.display-screen {
+    color: #ffffff;
+    font-size: 2.5rem;
+    font-weight: 300;
+    text-align: right;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    line-height: 1.2;
+}
+
+/* Button Grid Layout */
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    gap: 15px;
+    height: 400px;
+}
+
+/* Base Button Styles */
+.btn {
+    border: none;
+    border-radius: 12px;
+    font-size: 1.4rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    outline: none;
+    user-select: none;
+}
+
+.btn:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+/* Number Buttons */
+.btn-number {
+    background: #34495e;
+    color: #ffffff;
+}
+
+.btn-number:hover {
+    background: #4a6741;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Operation Buttons */
+.btn-operation {
+    background: #e67e22;
+    color: #ffffff;
+    font-size: 1.6rem;
+}
+
+.btn-operation:hover {
+    background: #d35400;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Clear Button */
+.btn-clear {
+    background: #e74c3c;
+    color: #ffffff;
+    font-weight: 600;
+}
+
+.btn-clear:hover {
+    background: #c0392b;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Equals Button */
+.btn-equals {
+    background: #27ae60;
+    color: #ffffff;
+    font-size: 1.8rem;
+    font-weight: 600;
+    grid-row: span 2;
+}
+
+.btn-equals:hover {
+    background: #229954;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Decimal Button */
+.btn-decimal {
+    background: #34495e;
+    color: #ffffff;
+    font-size: 1.8rem;
+}
+
+.btn-decimal:hover {
+    background: #4a6741;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Zero Button (spans 2 columns) */
+.btn-zero {
+    grid-column: span 2;
+}
+
+/* Add Button (spans 2 rows) */
+.btn-add {
+    grid-row: span 2;
+}
+
+/* Button Focus States for Accessibility */
+.btn:focus {
+    outline: 3px solid #3498db;
+    outline-offset: 2px;
+}
+
+/* Responsive Design for Mobile Devices */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+    
+    .calculator {
+        padding: 20px;
+        max-width: 100%;
+        border-radius: 15px;
+    }
+    
+    .display {
+        padding: 15px;
+        margin-bottom: 15px;
+    }
+    
+    .display-screen {
+        font-size: 2rem;
+        min-height: 50px;
+    }
+    
+    .buttons {
+        gap: 10px;
+        height: 350px;
+    }
+    
+    .btn {
+        font-size: 1.2rem;
+        border-radius: 10px;
+    }
+    
+    .btn-operation {
+        font-size: 1.4rem;
+    }
+    
+    .btn-equals {
+        font-size: 1.6rem;
+    }
+    
+    .btn-decimal {
+        font-size: 1.6rem;
+    }
+}
+
+@media (max-width: 320px) {
+    .calculator {
+        padding: 15px;
+    }
+    
+    .display-screen {
+        font-size: 1.8rem;
+        min-height: 45px;
+    }
+    
+    .buttons {
+        gap: 8px;
+        height: 320px;
+    }
+    
+    .btn {
+        font-size: 1.1rem;
+    }
+    
+    .btn-operation {
+        font-size: 1.3rem;
+    }
+    
+    .btn-equals {
+        font-size: 1.5rem;
+    }
+    
+    .btn-decimal {
+        font-size: 1.5rem;
+    }
+}
+
+/* Tablet Responsive Design */
+@media (min-width: 481px) and (max-width: 768px) {
+    .calculator {
+        max-width: 400px;
+    }
+    
+    .display-screen {
+        font-size: 2.8rem;
+    }
+    
+    .buttons {
+        height: 450px;
+    }
+    
+    .btn {
+        font-size: 1.5rem;
+    }
+    
+    .btn-operation {
+        font-size: 1.7rem;
+    }
+    
+    .btn-equals {
+        font-size: 1.9rem;
+    }
+}
+
+/* Large Screen Optimization */
+@media (min-width: 769px) {
+    .calculator {
+        max-width: 380px;
+    }
+    
+    .display-screen {
+        font-size: 3rem;
+        min-height: 70px;
+    }
+    
+    .buttons {
+        height: 420px;
+    }
+}
